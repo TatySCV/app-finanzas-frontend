@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colores base por defecto (modo claro) */
+:root {
+  --primary: #3b82f6;    /* azul por defecto */
+  --primary-dark: #2563eb;
+  --secondary: #8b5cf6;  /* morado */
+  --secondary-dark: #7c3aed;
+  --accent: #f59e0b;     /* ámbar */
+}
+
+/* Variantes en modo oscuro (pueden ser los mismos o más claros) */
+.dark {
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --secondary: #a78bfa;
+  --secondary-dark: #8b5cf6;
+  --accent: #fbbf24;
+}
+
+/* Clases utilitarias personalizadas (opcional) */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+.text-primary {
+  color: var(--primary);
+}
+.border-primary {
+  border-color: var(--primary);
+}
+/* Puedes agregar más: hover, focus, etc. */
