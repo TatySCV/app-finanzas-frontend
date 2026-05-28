@@ -1,26 +1,22 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom"
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import LoginPage from "../pages/LoginPage"
-import DashboardPage from "../pages/DashboardPage"
-import IncomePage from "../pages/IncomePage"
-import ExpensesPage from "../pages/ExpensesPage"
-import SavingsPage from "../pages/SavingsPage"
-import CreditsPage from "../pages/CreditsPage"
-import DebtsPage from "../pages/DebtsPage"
-import StatisticsPage from '../pages/StatisticsPage';
+import LoginPage from "../pages/LoginPage";
+import DashboardPage from "../pages/DashboardPage";
+import IncomePage from "../pages/IncomePage";
+import ExpensesPage from "../pages/ExpensesPage";
+import SavingsPage from "../pages/SavingsPage";
+import CreditsPage from "../pages/CreditsPage";
+import DebtsPage from "../pages/DebtsPage";
+import StatisticsPage from "../pages/StatisticsPage";
 import MonthlySummaryPage from "../pages/MonthlySummaryPage";
-import SettingsPage from "../pages/SettingsPage"
+import SettingsPage from "../pages/SettingsPage";
 
-import ProtectedRoute from "./ProtectedRoute"
-import MainLayout from "../layouts/MainLayout"
+import ProtectedRoute from "./ProtectedRoute";
+import MainLayout from "../layouts/MainLayout";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<LoginPage />} />
 
@@ -44,8 +40,8 @@ function AppRouter() {
           <Route path="/configuracion" element={<SettingsPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
-  )
+    </HashRouter>
+  );
 }
 
-export default AppRouter
+export default AppRouter;
